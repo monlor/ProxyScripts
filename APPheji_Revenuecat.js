@@ -166,7 +166,7 @@ if (typeof $response == "undefined") {
       const { name, id } = UAMappings[i];
       guding6.subscriber.subscriptions = {};
       guding6.subscriber.subscriptions[id] = data;
-      guding6.subscriber.entitlements = [];
+      guding6.subscriber.entitlements = {};
       guding6.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
       guding6.subscriber.entitlements[name].product_identifier = id;
       break;
