@@ -71,7 +71,7 @@ if (typeof $response == "undefined") {
     'Time%20Machine':{ name: 'timemachine_pro', id: 'com.abouttime.timemachine.year'},
     'todo':{ name: 'Pro', id: 'com.abouttime.todo.year'},
     '%E6%B0%B4%E5%BF%83%E8%AE%B0':{ name: 'pro', id: 'com.abouttime.heart.year'},
-    'Pomodoro':{ name: 'Plus', id: 'com.MINE.PomodoroTimer.plus.lifetime'},
+    'Pomodoro':{ name: 'Yearly', id: 'com.MINE.PomodoroTimer.plus.yearly'},
     'My%20Time':{ name: 'Pro', id: 'ninja.fxc.mytime.pro.lifetime'},
     'StarDiary':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
