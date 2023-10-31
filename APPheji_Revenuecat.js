@@ -155,29 +155,35 @@ if (typeof $response == "undefined") {
     
   };
 
-
-  // 获取当前日期
-  const currentDate = new Date();
+  // 初始购买日期
+  const originalPurchaseDate = new Date("2023-06-10T18:06:01Z");
   
-  // 获取年份、月份、日期、小时、分钟和秒
-  const year = currentDate.getUTCFullYear() + 1;
-  const month = String(currentDate.getUTCMonth() + 1).padStart(2, '0');
-  const day = String(currentDate.getUTCDate()).padStart(2, '0');
-  const hours = String(currentDate.getUTCHours()).padStart(2, '0');
-  const minutes = String(currentDate.getUTCMinutes()).padStart(2, '0');
-  const seconds = String(currentDate.getUTCSeconds()).padStart(2, '0');
+  // 当前日期
+  const now = new Date();
   
-  // 格式化日期字符串
-  const expiresDate = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
-
+  // 计算购买日期
+  const purchaseDate = new Date(originalPurchaseDate);
+  while (purchaseDate < now) {
+    purchaseDate.setFullYear(purchaseDate.getFullYear() + 1);
+  }
+  
+  // 计算过期日期
+  const expiresDate = new Date(purchaseDate);
+  expiresDate.setFullYear(expiresDate.getFullYear() + 1);
+  
+  // 格式化日期为字符串
+  const formatDate = (date) => {
+    return date.toISOString().slice(0, 19) + "Z";
+  };
   
   const data = {
-    "expires_date": expiresDate,
-    "original_purchase_date": "2023-06-06T06:06:06Z",
-    "purchase_date": "2023-06-06T06:06:06Z",
+    "expires_date": formatDate(expiresDate),
+    "original_purchase_date": originalPurchaseDate.toISOString(),
+    "purchase_date": formatDate(purchaseDate),
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
+
   for (const i in UAMappings) {
     if (new RegExp(`^${i}`, 'i').test(UA)) {
       const { name, id } = UAMappings[i];
