@@ -70,7 +70,6 @@ var uaProductMapping = {
   'Scanner': {product_id: 'scannerapp.free.premium.subscription.m1mte'},
   'Metion': {product_id: 'org.zrey.metion.pro'},
   'Ever%20Play': {product_id: 'com.zhangchao.AudioPlayer.subscription.oneYear'},
-  'Pixiu%E8%AE%B0%E8%B4%A6': {product_id: 'com.RuoG.Pixiu.VIPYear'},
   'Pixiu': {product_id: 'com.RuoG.Pixiu.VIPYear'},
 
 };
