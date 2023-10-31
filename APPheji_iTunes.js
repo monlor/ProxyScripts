@@ -71,7 +71,7 @@ var uaProductMapping = {
   'Metion': {product_id: 'org.zrey.metion.pro'},
   'Ever%20Play': {product_id: 'com.zhangchao.AudioPlayer.subscription.oneYear'},
   'Pixiu%E8%AE%B0%E8%B4%A6': {product_id: 'com.RuoG.Pixiu.VIPYear'},
-  
+  'Pixiu': {product_id: 'com.RuoG.Pixiu.VIPYear'},
 
 };
 var receipt = {
