@@ -154,8 +154,25 @@ if (typeof $response == "undefined") {
     
     
   };
+
+
+  // 获取当前日期
+  const currentDate = new Date();
+  
+  // 获取年份、月份、日期、小时、分钟和秒
+  const year = currentDate.getUTCFullYear() + 1;
+  const month = String(currentDate.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getUTCDate()).padStart(2, '0');
+  const hours = String(currentDate.getUTCHours()).padStart(2, '0');
+  const minutes = String(currentDate.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(currentDate.getUTCSeconds()).padStart(2, '0');
+  
+  // 格式化日期字符串
+  const expiresDate = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
+
+  
   const data = {
-    "expires_date": "2030-06-06T06:06:06Z",
+    "expires_date": expiresDate,
     "original_purchase_date": "2023-06-06T06:06:06Z",
     "purchase_date": "2023-06-06T06:06:06Z",
     "ownership_type": "PURCHASED",
