@@ -5,7 +5,7 @@ scriptings:
 - http_response:
     name: iTunes合集
     match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
-    script_url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js
+    script_url: https://raw.githubusercontent.com/monlor/apple-crack-scripts/main/APPheji_iTunes.js
     body_required: true
 - http_response:
     name: Revenuecat合集

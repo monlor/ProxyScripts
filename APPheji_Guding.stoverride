@@ -556,7 +556,7 @@ http:
 
 script-providers:
   "iTunes合集":
-    url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js
+    url: https://raw.githubusercontent.com/monlor/apple-crack-scripts/main/APPheji_iTunes.js
     interval: 86400
   "Revenuecat合集":
     url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
